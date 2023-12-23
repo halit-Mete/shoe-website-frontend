@@ -1,0 +1,189 @@
+/* Luvia Theme = Arka plan temanın adı */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: #1e2227;
+    color: #fff;
+}
+
+nav {
+    background: #1e2227;
+    display: flex;          /* içerisindeki 2 div yanyana gelmiş oluyor */
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 8%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.logo {
+    width: 120px;
+}
+
+nav .nav-links {
+    display: flex;          /* veriyoruz ki birbirinden column-gap ile ayırabilelim */
+    column-gap: 20px;
+}
+
+nav .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 26px;
+    transition: 0.3s ease;
+}
+
+nav .nav-links a:hover {
+    color: red;
+}
+
+.row {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.row .col-1,
+.row .col-2 {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-basis: 50%;        /* sayfayı yarı yarıya paylaştırıyor / yada flex: 1; de yazabiliriz */
+}
+
+.row .col-1 {
+    padding-left: 8%;
+}
+
+.row .col-1 h1 {
+    font-size: 74px;
+    line-height: 100px;
+    margin-bottom: 5px;
+}
+
+.row .col-1 p {
+    padding-right: 10px;
+    line-height: 1.4;
+}
+
+.row .col-1 .price {
+    display: flex;
+    align-items: flex-end;      /* 250 dolar biraz üstteydi aşağıya indiriyor */
+    column-gap: 10px;
+    margin-top: 10px;
+}
+
+.row .col-1 .price h2 {
+    font-size: 40px;
+    line-height: 1;
+}
+
+.row .col-1 .buttons {
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;            /* Sıkışma olduğunda alt alta atsın / aşağıya taşsın diye */
+}
+
+.col-1 .buttons button,
+.col-1 .buttons a {
+    display: inline-block;
+    width: fit-content;
+    padding: 18px 50px;
+    background: red;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+}
+
+.col-1 .buttons button:hover,
+.col-1 .buttons a:hover {
+    background: #aa0505;
+    transform: translateY(-5px);
+}
+
+.col-2 .feature-img {
+    width: 100%;
+    text-align: center;
+}
+
+.col-2 .feature-img img{
+    width: 80%;
+    transform: rotate(-20deg);      /* ayakkabının biraz yan gözükmesini sağlıyor */
+    transition: 0.5s ease;
+}
+
+.col-2 .feature-img img:hover {
+    transform: rotate(0);
+}
+
+.col-2 {
+    padding-top: 8%;
+    background: red;
+    position: relative;     /* kırmızının içindeki nike yazısını içinde hapsetmmek için bunu verdik */
+}
+
+.small-img-wrapper {
+    display: flex;
+    width: 80%;
+    margin: 70px auto 0;        /* arka planına renk vermek için ayırdık birbirinden karışmasın diye */
+    align-items: center;
+    justify-content: space-around;
+}
+
+.small-img {
+    width: 80px;
+    height: 80px;
+}
+
+.small-img img{
+    width: 120px;
+    transform: rotate(-20deg);
+    transition: 0.5s ease;
+}
+
+.small-img img:hover {
+    transform: translate(-20px, 10px) rotate(0);
+}
+
+.small-img:nth-child(1) {
+    background: #b9c8ff;
+}
+
+.small-img:nth-child(2) {
+    background: #9dff90;
+}
+
+.small-img:nth-child(3) {
+    background: #b1ffdd;
+}
+
+.small-img:nth-child(4) {
+    background: #ff6767;
+}
+
+.col-2 h1 {
+    color: #ff6767;
+    font-size: 150px;
+    position: absolute;
+    top: 22%;
+    left: 5%;
+    user-select: none;
+}
+
+.col-2 h1:hover{
+    color: #fff;
+}
